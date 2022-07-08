@@ -32,12 +32,14 @@ export default {
         getAdvert() {
             axios.get(`/api/advert/${this.$route.params.id}?fields=0`)
                 .then( res => {
+                    //console.log(res)
                     this.advert = res.data.data
                 })
         },
         getAdvertFull(event) {
             axios.get(`/api/advert/${this.$route.params.id}?fields=1`)
                 .then( res => {
+                    //console.log(res)
                     this.advert = res.data.data
                 });
             event.target.className += ' disabled'

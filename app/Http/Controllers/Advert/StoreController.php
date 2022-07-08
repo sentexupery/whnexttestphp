@@ -25,7 +25,7 @@ class StoreController extends Controller
                     AdvertPhoto::create(['advert_id'=>$advert->id,'photo_path'=>$photo]);
                 }
             }
-            return response()->json(['ID' => $advert->id], 200);
+            return response()->json(['ID' => $advert->id], 201);
         } else {
             return response()->json(['errors' => 'Ошибочка'], 422);
         }

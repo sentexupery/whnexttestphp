@@ -26,6 +26,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/advert/".concat(this.$route.params.id, "?fields=0")).then(function (res) {
+        //console.log(res)
         _this.advert = res.data.data;
       });
     },
@@ -33,6 +34,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get("/api/advert/".concat(this.$route.params.id, "?fields=1")).then(function (res) {
+        //console.log(res)
         _this2.advert = res.data.data;
       });
       event.target.className += ' disabled';
